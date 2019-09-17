@@ -22,14 +22,6 @@
     "eject": "react-scripts eject"
   },
   "babel": {
-    "plugins": [
-      [
-        "@babel/plugin-proposal-decorators",
-        {
-          "legacy": true
-        }
-      ]
-    ],
     "presets": [
       "react-app"
     ]

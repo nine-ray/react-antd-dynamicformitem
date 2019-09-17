@@ -1,5 +1,17 @@
 import React from "react";
-import {Button, Col, Form, Icon, Row} from 'antd';
+// import {Button, Col, Form, Icon, Row} from 'antd';
+import Col from 'antd/es/col'; // 加载 JS
+import Row from 'antd/es/row'; // 加载 JS
+import Icon from 'antd/es/icon';// 加载 JS
+import Button from 'antd/es/button';// 加载 JS
+import Form from 'antd/es/form';// 加载 JS
+
+import 'antd/es/col/style/css'; // 加载 CSS
+import 'antd/es/row/style/css'; // 加载 CSS
+import 'antd/es/icon/style/css'; // 加载 CSS
+import 'antd/es/form/style/css'; // 加载 CSS
+import 'antd/es/button/style/css'; // 加载 CSS
+
 
 const FormItem = Form.Item;
 

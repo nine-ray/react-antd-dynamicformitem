@@ -1,13 +1,36 @@
+//{
+//  "presets": ["react","es2015",
+//    ["env", { "modules": false }],
+//    "stage-0",
+//    "react"
+//  ],
+//  "plugins": ["transform-react-jsx",["import", {
+//    "libraryName": "antd",
+//    "libraryDirectory": "es",
+//    "style": "css" // `style: true` 会加载 less 文件
+//  }]],
+//  "comments": false
+//}
 {
-  "presets": ["react","es2015",
-    ["env", { "modules": false }],
-    "stage-0",
-    "react"
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "targets": "> 0.25%, not dead"
+      }
+    ],
+    "@babel/preset-react"
   ],
-  "plugins": ["transform-react-jsx",["import", {
-    "libraryName": "antd",
-    "libraryDirectory": "es",
-    "style": "css" // `style: true` 会加载 less 文件
-  }]],
-  "comments": false
+  "plugins": [
+    "@babel/plugin-transform-runtime",
+    "@babel/plugin-transform-modules-commonjs",
+    [
+      "@babel/plugin-proposal-decorators",
+      {
+        "legacy": true
+      }
+    ],
+    "@babel/plugin-proposal-class-properties",
+    "@babel/plugin-proposal-object-rest-spread",
+  ]
 }

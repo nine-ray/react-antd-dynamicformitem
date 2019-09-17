@@ -1,5 +1,5 @@
-import DynamicFormItem from "./components/DynamicFormItem"
-import MyInput from "./components/MyInput"
+import DynamicFormItem from "./pages/DynamicFormItem"
+import MyInput from "./pages/MyInput"
 
 module.exports={
     DynamicFormItem,
