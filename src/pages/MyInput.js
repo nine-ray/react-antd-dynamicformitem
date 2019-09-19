@@ -11,7 +11,7 @@ class MyInput extends React.Component {
         const {actions = []} = this.props;// 有默认传来的 chang事件，和 value值
         const spanValue = 24 / actions.length;
         return (
-            <Row>
+            <Row gutter={16}>
                 {
                     actions.map((action, index) => <Col key={index} span={spanValue}>
                             {action}

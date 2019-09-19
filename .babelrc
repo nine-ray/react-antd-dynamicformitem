@@ -1,16 +1,3 @@
-//{
-//  "presets": ["react","es2015",
-//    ["env", { "modules": false }],
-//    "stage-0",
-//    "react"
-//  ],
-//  "plugins": ["transform-react-jsx",["import", {
-//    "libraryName": "antd",
-//    "libraryDirectory": "es",
-//    "style": "css" // `style: true` 会加载 less 文件
-//  }]],
-//  "comments": false
-//}
 {
   "presets": [
     [
@@ -31,6 +18,6 @@
       }
     ],
     "@babel/plugin-proposal-class-properties",
-    "@babel/plugin-proposal-object-rest-spread",
+    "@babel/plugin-proposal-object-rest-spread"
   ]
 }

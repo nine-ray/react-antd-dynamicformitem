@@ -1,15 +1,16 @@
 {
   "name": "react-antd-dynamicformitem",
-  "version": "1.0.11",
+  "version": "1.1.0",
   "description": "antd动态增加表单项封装，复杂表单项的值封装",
-  "main": "dist/index.js",
+  "main": "lib/index.js",
   "files": [
-    "dist"
+    "lib"
   ],
   "scripts": {
-    "build": "set NODE_ENV=production && webpack --config ./config/webpack.config.prod.js",
+    "build": "./node_modules/.bin/babel src --out-dir lib",
     "pub": "npm publish",
-    "dev": "webpack-dev-server --config ./config/webpack.config.dev.js"
+    "dist": "antd-tools run dist",
+    "compile": "antd-tools run compile"
   },
   "repository": {
     "type": "git",
@@ -25,32 +26,18 @@
   },
   "homepage": "https://github.com/nine-ray/react-antd-dynamicformitem#readme",
   "dependencies": {
+    "@babel/polyfill": "^7.6.0",
     "antd": "^3.23.2",
     "react": "^15.6.1",
     "react-dom": "^15.6.1"
   },
   "devDependencies": {
-    "@babel/cli": "^7.0.0",
-    "@babel/core": "^7.0.0",
-    "@babel/plugin-proposal-class-properties": "^7.0.0",
-    "@babel/plugin-proposal-decorators": "^7.0.0",
-    "@babel/plugin-transform-modules-commonjs": "^7.0.0",
-    "@babel/plugin-transform-runtime": "^7.0.0",
-    "@babel/preset-env": "^7.0.0",
-    "@babel/preset-react": "^7.0.0",
-    "babel-loader": "^8.0.0",
-    "babel-plugin-import": "^1.12.1",
-    "css-loader": "^1.0.0",
-    "file-loader": "^2.0.0",
-    "html-loader": "^0.4.4",
-    "less": "^3.10.3",
-    "less-loader": "^4.1.0",
-    "mini-css-extract-plugin": "^0.5.0",
-    "style-loader": "^0.23.0",
-    "webpack": "^4.39.1",
-    "webpack-bundle-analyzer": "^3.5.0",
-    "webpack-cli": "^3.3.8",
-    "webpack-dev-server": "3.2.1",
-    "webpack-merge": "^4.1.4"
+    "@babel/cli": "^7.6.0",
+    "@babel/core": "^7.6.0",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/plugin-proposal-decorators": "^7.6.0",
+    "@babel/plugin-transform-runtime": "^7.6.0",
+    "@babel/preset-env": "^7.6.0",
+    "@babel/preset-react": "^7.0.0"
   }
 }
