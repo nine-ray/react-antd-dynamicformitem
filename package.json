@@ -1,6 +1,6 @@
 {
   "name": "react-antd-dynamicformitem",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "antd动态增加表单项封装，复杂表单项的值封装",
   "main": "lib/index.js",
   "files": [
@@ -16,9 +16,6 @@
     "type": "git",
     "url": "git+https://github.com/nine-ray/react-antd-dynamicformitem.git"
   },
-  "keywords": [
-    "zjy5@958913"
-  ],
   "author": "nine-ray",
   "license": "ISC",
   "bugs": {
