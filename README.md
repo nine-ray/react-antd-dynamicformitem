@@ -31,7 +31,6 @@ const Option = Select.Option;
 class FormTest extends PureComponent {
 renderView= (params)=>{//表单项
     return <MyInput
-      initialValue={params.key}
       actions={[<Select onChange={(value) => { //返回需要渲染的每个标签
         params.renderViewOnchange({"sex": value}, params.key)
       }} value={params.key.item1}>
@@ -46,12 +45,11 @@ renderView= (params)=>{//表单项
       }}/>, <Input value={params.key.item4} onChange={(value) => {
         params.renderViewOnchange({"phone": value.target.value}, params.key)
       }}/>]}
-      renderViewOnchange={params.renderViewOnchange}
     />
   };
   render() {
     let {form} = this.props;
-    const okHandle = () => {
+    const okHandle = () => {//这个方法可以调用用来打印结果，不需要可删除
       form.validateFields((err, fieldsValue) => {
         if (err) return;
         form.resetFields();
