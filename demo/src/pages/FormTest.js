@@ -1,7 +1,9 @@
 import React, {PureComponent} from 'react';
 import {Form, Input, Select,Button} from 'antd';
+// import {MyInput,DynamicFormItem} from "react-antd-dynamicformitem"
 import MyInput from "../components/MyInput"
 import DynamicFormItem from "../components/DynamicFormItem"
+import Icon from "antd/es/icon";
 
 const Option = Select.Option;
 
@@ -39,7 +41,8 @@ class FormTest extends PureComponent {
                        keysName={"matches"}
                        extra={"这里是提示信息"}
                        renderViewData={matchesRules}
-                       addButton={<Button>add</Button>}
+                       addViewStyle={{color:"blue"}}
+                       addView={<view><Icon type="plus"/>Add field</view>}
                        renderView={this.renderView}
       />
     );
