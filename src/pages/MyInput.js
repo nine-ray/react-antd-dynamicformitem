@@ -8,12 +8,19 @@ import 'antd/es/row/style/css'; // 加载 CSS
 class MyInput extends React.Component {
 
     render() {
-        const {actions = []} = this.props;// 有默认传来的 chang事件，和 value值
-        const spanValue = 24 / actions.length;
+        const {actions,children} = this.props;// 有默认传来的 chang事件，和 value值
+        const spanValue =actions? 24 / actions.length:24 / children.length;
+
         return (
             <Row gutter={16}>
                 {
-                    actions.map((action, index) => <Col key={index} span={spanValue}>
+                    actions?actions.map((action, index) => <Col key={index} span={spanValue}>
+                            {action}
+                        </Col>
+                    ):null
+                }
+                {
+                    children.map((action, index) => <Col key={index} span={spanValue}>
                             {action}
                         </Col>
                     )
